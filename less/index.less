@@ -54,6 +54,193 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
+//variables
+@header-color: purple;
 
+@main-font: 'Acme', sans-serif;
+
+.center(){
+	display: flex;
+	justify-content: center;
+}
+.main-h3(){
+	font-size: 2.0rem;
+    margin: 0% auto 9%;
+    text-align: center;
+}
+//style
+.container{
+	border: 2px solid crimson;
+	max-width: 100%;
+	width: 100%;
+	margin: 0 auto;
+	font-family: @main-font;
+		nav{
+			display: flex;
+			justify-content: space-around;
+			margin: 0 auto;
+			background: aquamarine;
+			font-size: 15px;
+
+			a{
+				margin: 2% 0% 0%;
+				color:darkturquoise;
+			}
+
+			img{
+				max-width: 100%;
+				width: 10%;
+
+				@media( max-width: 500px){
+					width: 15%;
+					max-width: 100%;
+				}//closes nav media query
+			}
+		}// closes nav
+		header{
+			background: @header-color;
+			.center();
+		
+			@media( max-width: 500px){
+				background: @header-color;
+				.center();
+				padding: 6% 0%;
+			}
+
+				.head-content{
+					font-size: 1.5rem;
+				}
+
+				.title{
+					width: 51%;
+					text-align: center;
+					margin: 5% auto 0%;
+
+					@media( max-width: 500px){
+						width: 62%;
+						text-align: center;
+						margin: 5% auto 0%;
+					}
+				}
+
+				.signup{
+					width: 37%;
+					margin: 20% auto 2%;
+					text-align: center;
+
+					@media( max-width: 500px){
+						width: 79%;
+						margin: 20% auto 2%;
+						text-align: center;
+					}
+				}
+			
+				.profile{
+					width: 30%;
+					padding: 2%;
+
+					@media( max-width: 500px){
+						width: 130%;
+						padding: 2%
+					}
+				}
+
+				img{			
+					max-width: 100%;
+				}
+
+				button{
+					font-size: 1.5rem;
+					background: white;
+					opacity: 75%;
+					border-radius: 6px;
+					margin: 4% auto 0%;
+				}
+
+		}// closes header
+		.aboutContainer{
+			background:cadetblue;
+			padding: 1% 0%;
+
+			.about{
+				display: flex;
+				justify-content: space-evenly;
+				margin: 4% auto;
+				font-size: 1.3rem;
+
+				@media( max-width: 500px){
+					display: flex;
+					justify-content: space-evenly;
+					margin: 4% auto;
+					font-size: 1.3rem;
+					flex-wrap: wrap;
+				}
+			}
+
+			.me{
+				width: 26%;
+				margin: 0% 7%;
+
+				@media( max-width: 500px){
+					width: 100%;
+					margin: 10% 7%;
+				}
+			}
+
+			h3{
+				.main-h3();
+			}
+
+			.skillset{
+				margin: 0% auto 5%;
+			}
+
+			li{
+				margin: 2% auto;
+			}
+		}//closes the aboutContainer
+		.work{
+			background:cornflowerblue;
+			padding: 3% 0%;
+			
+			div{
+				display: flex;
+				flex-direction: column;
+				font-size: 1.5rem;
+				margin: 0% 2%;
+
+			}
+
+			h3{
+				font-size: 2rem;
+				margin: 0 auto;
+			}
+
+			dt{
+				margin:5% auto 0%
+			}
+		}//closes work history section
+		footer{
+			display: flex;
+			flex-direction: column;
+			margin: 0 2%;
+			font-size: 1.1rem;
+			margin: 3% auto 0%;
+
+			li{
+				margin:1% auto;
+
+				@media( max-width: 500px){
+					margin: 5% auto;
+				}
+			}
+
+			p{
+				text-align: center;
+				margin: 1% auto;
+			}
+
+		}//closes footer 
+}// closes main container selector
